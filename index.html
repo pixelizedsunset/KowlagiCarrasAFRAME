@@ -3,21 +3,35 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   </head>
   <body>
+    <a-assets>
+      <a-asset-item id="Sofa" src="models/sofa.gltf"></a-asset-item>
+      <a-asset-item id="SofaLEGS" src="models/sofaLEGS.gltf"></a-asset-item>
+      <a-asset-item id="Blanket" src="models/blanket.gltf"></a-asset-item>
+      <a-asset-item id="TableBIG" src="models/tableBIG.gltf"></a-asset-item>
+      <a-asset-item id="Vases" src="models/vases.gltf"></a-asset-item>
+      <a-asset-item id="Magazine" src="models/magazine.gltf"></a-asset-item>
+      <a-asset-item id="Lampshade" src="models/lampshade.gltf"></a-asset-item>
+      <a-asset-item id="Lampstand" src="models/lampstand.gltf"></a-asset-item>
+    </a-assets>
     <a-scene>
       <!-- Room -->
       <a-box position="0 1 -5" rotation="0 0 0" width="40" height="50" depth="0.1" color="#E5D4C5"></a-box> 
-      <a-plane position="0 -0.25 -5" rotation="-90 0 0" width="10" height="5" color="#E5D4C5"></a-plane> 
+      <a-plane position="0 -0.25 -5" rotation="-90 0 0" width="10" height="5" color="#E5D4C5"></a-plane>
 
       <!-- Couch and armrest (need to add something in the center) -->
-      
+      <a-entity gltf-model="#Sofa" ></a-entity>
+      <a-entity gltf-model="#SofaLEGS" ></a-entity>
+      <a-entity gltf-model="#Blanket" ></a-entity>
 
       <!-- Double Table Setup -->
-      
-
-      <!-- Fix this lamp dimensions lol -->
-      
+      <a-entity gltf-model="#TableBIG" ></a-entity>
+      <a-entity gltf-model="#TableBIG" ></a-entity>
+      <a-entity gltf-model="#Vases" ></a-entity>
+      <a-entity gltf-model="#Magazine" ></a-entity>
       
       <!-- Lampshade with a click event listener -->
+      <a-entity gltf-model="#Lampshade" ></a-entity>
+      <a-entity gltf-model="#Lampstand" ></a-entity>
       
 
       <!-- Bright ball -->
