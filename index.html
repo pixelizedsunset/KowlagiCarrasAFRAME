@@ -5,25 +5,25 @@
   <body>
     <a-scene>
       <!-- Room -->
-      <a-box position="0.32827 1 -3.59325" rotation="" width="40" height="50" depth="0.1" color="#E5D4C5" material="" geometry="" scale="1.061 1 1" visible=""></a-box> 
-      <a-plane position="0 -0.25 -2.26401" rotation="-90 0 0" width="10" height="5" color="#E5D4C5" material="" geometry=""></a-plane>
+      <a-box position="0.32827 1 -3.59325" rotation="" width="40" height="50" depth="0.1" color="#E5D4C5" material="color: #dfcbbf; roughness: 1" geometry="" scale="1.061 1 1" visible=""></a-box>
+      <a-plane position="0 0.00044 -2.26401" rotation="-90 0 0" width="10" height="5" color="#E5D4C5" material="color: #806c52" geometry=""></a-plane>
       <!-- Couch and armrest (need to add something in the center) -->
       <a-box position="0 0.17248 -3" depth="1" width="3" height="0.5" color="#497D9D" radius="0.2" src="textures/cushion.png" material="" geometry=""></a-box> <!-- Seat base -->
       <a-box position="0 0.65001 -3.35566" depth="0.2" width="3" height="0.7" color="#497D9D" radius="0.2" src="textures/cushion.png" material="" geometry="" scale="1 2.203 1.47099"></a-box> <!-- Back base -->
-      <a-box position="1.5 0.44232 -3" depth="1" width="0.2" height="0.6" color="#497D9D" radius="0.1" src="textures/cushion.png" material="" geometry=""></a-box> <!-- RArmrest -->
-      <a-box position="-1.55268 0.442 -3" depth="1" width="0.2" height="0.6" color="#497D9D" radius="0.1" src="textures/cushion.png" material="" geometry="" scale="1.556 1 1.061"></a-box> <!-- LArmrest -->
-      <a-box position="-0.81475 0.851 -3.409" depth="1" width="0.2" height="0.6" color="#497D9D" radius="0.1" src="textures/cushion.png" material="" geometry="" scale="3.022 2.38969 1.153" rotation="90 90 0"></a-box> <!-- LCushion -->
-      <a-box position="0.72241 0.85061 -3.40904" depth="1" width="0.2" height="0.6" color="#497D9D" radius="0.1" src="textures/cushion.png" material="" geometry="" rotation="90 90 0"></a-box> <!-- RCushion -->
+      <a-box position="1.5 0.44232 -3" depth="1" width="0.2" height="0.6" color="#497D9D" radius="0.1" src="textures/cushion.png" material="" geometry="primitive: cylinder" rotation="0 90 90" scale="0.334 1.895 0.258"></a-box> <!-- RArmrest -->
+      <a-box position="-1.55268 0.442 -3" depth="1" width="0.2" height="0.6" color="#497D9D" radius="0.1" src="textures/cushion.png" material="" geometry="primitive: cylinder" scale="0.33379 1.89468 0.25816" rotation="0 90 90"></a-box> <!-- LArmrest -->
+      <a-box position="-0.77374 0.851 -3.409" depth="1" width="0.2" height="0.6" color="#497D9D" radius="0.1" src="textures/cushion.png" material="" geometry="" scale="3.022 2.39 1.153" rotation="90 -90 0"></a-box> <!-- LCushion -->
+      <a-box position="0.72241 0.85061 -3.40904" depth="1" width="0.2" height="0.6" color="#497D9D" radius="0.1" src="textures/cushion.png" material="" geometry="" rotation="-90 -179.9981290871189 -90.0019293325351" scale="3.022 2.39 1.153"></a-box> <!-- RCushion -->
       <a-box position="-0.71535 0.336 -2.869" depth="1" width="0.2" height="0.6" color="#497D9D" radius="0.1" src="textures/cushion.png" material="" geometry="" scale="2.154 1.353 1.36" rotation="0 90 90"></a-box> <!-- LSeat -->
-      <a-box position="0.63964 0.33623 -2.86869" depth="1" width="0.2" height="0.6" color="#497D9D" radius="0.1" src="textures/cushion.png" material="" geometry="" rotation="0 90 90"></a-box> <!-- RSeat -->
+      <a-box position="0.63964 0.34134 -2.86354" depth="1" width="0.2" height="0.6" color="#497D9D" radius="0.1" src="textures/cushion.png" material="" geometry="" rotation="0 -90 -270" scale="2.154 1.353 1.36"></a-box> <!-- RSeat -->
       <!-- Double Table Setup -->
-      <a-cylinder position="-0.98842 0.25 -1.69791" radius="0.6" height="0.5" color="#A97E4A" src="textures/wood.png" material="" geometry=""></a-cylinder> <!-- LTabletop -->
-      <a-cylinder position="0.93837 0.25 -1.72343" radius="0.6" height="0.5" color="#A97E4A" src="textures/wood.png" material="" geometry="" rotation="-5.462006660982138 15.420586098150975 -1.2014924963893363"></a-cylinder> <!-- RTabletop -->
+      <a-cylinder position="-0.98842 0.16985 -1.69791" radius="0.6" height="0.5" color="#A97E4A" src="textures/wood.png" material="" geometry=""></a-cylinder> <!-- LTabletop -->
+      <a-cylinder position="0.93837 0.28425 -1.72343" radius="0.6" height="0.5" color="#A97E4A" src="textures/wood.png" material="" geometry="" rotation=""></a-cylinder> <!-- RTabletop -->
       <!-- Fix this lamp dimensions lol -->
-      <a-cylinder position="-2 1 -2.5" radius="0.1" height="2.5" color="#D4D4D4"></a-cylinder> 
+      <a-cylinder position="-2.27582 1 -2.90809" radius="0.1" height="2.5" color="#D4D4D4" material="color: #7f7676; metalness: 0.16" geometry=""></a-cylinder>
       
       <!-- Lampshade with a click event listener -->
-      <a-cylinder position="-2 2.75 -2.5" radius="0.5" height="0.7" color="#F8F2E2"></a-cylinder>
+      <a-cylinder position="-2.27513 2.26717 -2.88072" radius="0.5" height="0.7" color="#F8F2E2" material="" geometry="openEnded: true"></a-cylinder>
 
       <!-- Bright ball -->
       <a-sphere id="sun" position="-2 3.0 -2.5" radius="0.3" color="yellow" visible="false"></a-sphere>
