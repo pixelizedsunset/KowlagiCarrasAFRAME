@@ -1,14 +1,64 @@
 <html>
   <head>
-    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   </head>
   <body>
+    <a-assets>
+      <a-asset-item id="Couch" src="models/sofa.gltf"></a-asset-item>
+      <a-asset-item id="SofaLEGS" src="models/sofaLEGS.gltf"></a-asset-item>
+      <a-asset-item id="Blanket" src="models/blanket.gltf"></a-asset-item>
+      <a-asset-item id="Table" src="models/table.gltf"></a-asset-item>
+      <a-asset-item id="Vases" src="models/vases.gltf"></a-asset-item>
+      <a-asset-item id="Magazine" src="models/magazine.gltf"></a-asset-item>
+      <a-asset-item id="Lampshade" src="models/lampshade.gltf"></a-asset-item>
+      <a-asset-item id="Lampstand" src="models/lampstand.gltf"></a-asset-item>
+    </a-assets>
+    
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+      <!-- Room --> 
+      <a-plane position="-0.619 0.046 -1.229" rotation="-90 0 0" width="10" height="5" src="textures/carpet.jpg" material="shader: flat; blending: none"></a-plane>
+      <a-plane position="0 0 6.145" scale="29.846 22.401 1.000" rotation="-90 0 0" src="textures/floor.jpg" material="color: #786845; shader: flat"></a-plane>
+      
+      <!-- Walls -->
+      <a-box position="0 1 -5" rotation="0 0 0" width="40" height="50" depth="0.1" color="#E5D4C5" material="shader: flat"></a-box>
+      <a-box position="-14.9943 1 -5" rotation="0 90 0" width="40" height="50" depth="0.1" color="#E5D4C5" material="shader: flat"></a-box>
+      <a-box position="14.75776 1 -5" rotation="0 90 0" width="40" height="50" depth="0.1" color="#E5D4C5" material="shader: flat"></a-box>
+      <a-box position="0 1 15.08253" rotation="0 180 0" width="40" height="50" depth="0.1" color="#E5D4C5" material="shader: flat"></a-box>
+      <a-box position="0 27 -5" rotation="0 0 0" width="40" height="0.1" depth="40" color="#E5D4C5" material="shader: flat"></a-box>
+
+      <!-- Couch and armrest -->
+      <a-entity gltf-model="models/sofa.gltf" position="0 0 -3.625" rotation="0 -90 0"></a-entity>
+      <a-entity gltf-model="models/sofaLEGS.gltf" position="0 0 -3.625" rotation="0 -90 0"></a-entity>
+      <a-entity gltf-model="models/blanket.gltf" position="0 0 -3.625" rotation="0 -90 0"></a-entity>
+
+      <!-- Paintings -->
+      <a-box position="-2.88135 8.56363 -4.94064" scale="0.755 0.755 0.755" src="textures/mountain range art.png" rotation="" width="5" height="5" depth="0.1" color="#FFFFFF" material="shader: flat"></a-box>
+      <a-box position="-4.13168 5.87402 -4.95541" scale="0.248 0.248 0.248" src="textures/beach art.png" rotation="" width="5" height="5" depth="0.1" color="#FFFFFF" material="shader: flat"></a-box>
+      <a-box position="-2.67136 5.87402 -4.95541" scale="0.248 0.248 0.248" src="textures/regular tree art.png" rotation="" width="5" height="5" depth="0.1" color="#FFFFFF" material="shader: flat"></a-box>
+      <a-box position="-1.27478 5.87402 -4.95541" scale="0.248 0.248 0.248" src="textures/dark tree art.png" rotation="" width="5" height="5" depth="0.1" color="#FFFFFF" material="shader: flat"></a-box>
+      <a-box position="0.5547 7.09123 -4.907" scale="0.396 0.738 1" src="textures/fog art.png" rotation="" width="5" height="5" depth="0.1" color="#FFFFFF" material="shader: flat"></a-box>
+      <a-box position="2.81029 7.09123 -4.907" scale="0.396 0.738 1" src="textures/pine tree art.png" rotation="" width="5" height="5" depth="0.1" color="#FFFFFF" material="shader: flat"></a-box>
+      <a-box position="0.18517 9.80834 -4.95541" scale="0.248 0.248 0.248" src="textures/grass art.png" rotation="" width="5" height="5" depth="0.1" color="#FFFFFF" material="shader: flat"></a-box>
+      <a-box position="1.647 9.808 -4.95541" scale="0.248 0.248 0.248" src="textures/bird art.png" rotation="" width="5" height="5" depth="0.1" color="#FFFFFF" material="shader: flat"></a-box>
+      <a-box position="3.130 9.808 -4.95541" scale="0.248 0.248 0.248" src="textures/reflection art.png" rotation="" width="5" height="5" depth="0.1" color="#FFFFFF" material="shader: flat"></a-box>
+      
+      <!-- Double Table Setup -->
+      <a-entity gltf-model="models/table.gltf" position="-7.071 0 3.090" rotation="0 77.46045615491651 0"></a-entity>
+      <a-entity gltf-model="models/table.gltf" scale="1 1.505 1" position="5.898 0 -3.764" rotation="0 -90 0"></a-entity>
+      <a-entity gltf-model="models/vases.gltf" position="0 -0.00155 -3.997" material="opacity: 0.51; color: #d8e3e9; metalness: 0.29" rotation="0 -90 0"></a-entity>
+      <a-entity gltf-model="models/magazine.gltf" position="-3.69385 1.41934 0.2161" rotation="0 82.60000000000001 0"></a-entity>
+      <a-plane position="2.54796 3.55911 0.204" rotation="0 -10.691392457141161 0" width="10" height="5" scale="0.116 0.241 0.241" src="textures/plant.png" material="opacity: 0.98"></a-plane>
+      
+      <!-- Lampshade -->
+      <a-entity gltf-model="models/lampshade.gltf" position="-5.675 -0.185 -3.698" material="color: #efede6; emissive: #fbd774; emissiveIntensity: 2.13"></a-entity>
+      <a-entity gltf-model="models/lampstand.gltf" position="-5.675 -0.185 -3.698" material="metalness: 0.48"></a-entity>
+      
+      <!-- Lighting -->
+      <a-light type="ambient" color="#ffffff" light="color: #b1c0ce; groundColor: #4f2149"></a-light>
+      <a-light type="directional" intensity="0.6" position="-6.28324 6.63329 0.48145" light="color: #f3aa44; groundColor: #560f57; penumbra: 0.33; shadowBias: 0.97"></a-light>
+      
+      <!-- Camera -->
+      <a-entity camera="far: 9998.36; fov: 40" position="-0.26181 3.90632 10.10828" rotation="5.76 0 0" look-controls=""></a-entity>
     </a-scene>
   </body>
 </html>
